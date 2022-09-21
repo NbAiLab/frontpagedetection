@@ -1,12 +1,16 @@
 #!/bin/bash
-if test $# -ne 0
+if test $# -gt 1
 then
-echo "Usage:$0 "
+echo "Usage:$0 <path to newspapers from production>"
 exit
 fi
 
+if test $# -eq 1
+then
+PRODUCTIONDATADIR=$1
+else
 PRODUCTIONDATADIR="/nfsmounts/avisforsider/data"
-
+fi
 
 antall=`find ${PRODUCTIONDATADIR} -mindepth 1 -maxdepth 1 -type d -printf '1'  | wc -c`
 
