@@ -1,0 +1,7 @@
+joblib==1.0.1
+numpy==1.19.5
+Pillow==9.2.0
+requests==2.24.0
+scipy==1.6.1
+torch==1.12.1
+transformers==4.15.0
