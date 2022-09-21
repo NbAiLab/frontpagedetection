@@ -33,19 +33,19 @@ papers=[]
 bundlename=""
 
 
-savedir="/nfsmounts/datastore/frontpageproductionresults"
+savedir="frontpageproductionresults"
 
 
 logdir="log"
 now = datetime.now()
 
-logfile=logdir + "/frontpagelog_"+ now.strftime("%Y%m%d-%H")+ ".log"
+logfile=logdir + "/frontpagelog_top_"+ now.strftime("%Y%m%d-%H")+ ".log"
 logfp=open(logfile, "a+")
 
 
 
-feature_extractor = ViTFeatureExtractor.from_pretrained('vit-front-page-384-top-v2/checkpoint-30000')
-model = ViTForImageClassification.from_pretrained('vit-front-page-384-top-v2/checkpoint-30000')
+feature_extractor = ViTFeatureExtractor.from_pretrained('NbAiLab/vit-front-page-384-top-v2')
+model = ViTForImageClassification.from_pretrained('NbAiLab/vit-front-page-384-top-v2')
 
 #model = model.to(torch.device("cuda"))
 model.eval()
